@@ -16,13 +16,25 @@ export default function HeroSection() {
           todo seu trajeto garantindo o melhor aprendizado.
         </p>
         <div class="social-icons">
-          <a href={config.socialLinks.instagram} aria-label="Instagram">
+          <a
+            href={config.socialLinks.instagram}
+            aria-label="Instagram"
+            target="_blank"
+          >
             <img src="/icons/instagram.png" alt="Instagram" />
           </a>
-          <a href={config.socialLinks.facebook} aria-label="Facebook">
+          <a
+            href={config.socialLinks.facebook}
+            aria-label="Facebook"
+            target="_blank"
+          >
             <img src="/icons/facebook.png" alt="Facebook" />
           </a>
-          <a href={config.socialLinks.youtube} aria-label="YouTube">
+          <a
+            href={config.socialLinks.youtube}
+            aria-label="YouTube"
+            target="_blank"
+          >
             <img src="/icons/youtube.png" alt="YouTube" />
           </a>
         </div>
