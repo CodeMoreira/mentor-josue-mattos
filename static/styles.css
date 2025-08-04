@@ -1,0 +1,266 @@
+/* Color variables */
+:root {
+  --color-background: #050407;
+  --color-light: #ffffff;
+  --color-text: #b1b1b1;
+  --gradient-primary: linear-gradient(180deg, #315efe 0%, #31d9fe 100%);
+
+  --max-video-width: 800px;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #050407;
+  color: #b1b1b1;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  background-image: var(--gradient-primary);
+  color: transparent;
+  background-clip: text;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-light);
+}
+
+p {
+  color: var(--color-text);
+}
+
+strong {
+  color: var(--color-light);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  position: relative;
+  padding-left: 2rem;
+}
+
+li::before {
+  content: "•";
+  color: var(--color-text);
+  position: absolute;
+  left: 1rem;
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Background lights & grids*/
+.background-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.background-effect-grid {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 800px;
+  opacity: 0.1;
+}
+
+.background-effect-light {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 1000px;
+  opacity: 0.7;
+}
+
+/* Header styles */
+.sticky-header {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--color-background);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.sticky-header h1 {
+  font-size: 1.5rem;
+}
+
+.cta-button {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-size: 1rem;
+}
+
+.cta-button:hover {
+  background: var(--gradient-primary);
+  box-shadow: 0 8px 25px rgba(49, 94, 254, 0.3);
+}
+
+/* Hero section */
+.hero-section {
+  width: 100%;
+  max-width: var(--max-video-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Video section */
+.video-section {
+  width: 100%;
+  max-width: var(--max-video-width);
+  color: var(--color-text);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--color-text);
+  height: 100%;
+}
+
+.more-info {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Offer section */
+.offer-section {
+  max-width: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.offer-section h1 {
+  text-align: center;
+}
+
+.offer-details {
+  max-width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+
+.offer-details h1 {
+  text-align: left;
+}
+
+.offer-item {
+  width: 100%;
+}
+
+/* About section */
+.about-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-image img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+.about-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-content {
+    padding: 0 1rem;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .offer-details {
+    padding: 2rem;
+  }
+}
