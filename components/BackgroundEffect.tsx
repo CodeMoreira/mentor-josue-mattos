@@ -18,13 +18,13 @@ export default function BackgroundEffect({
         class="background-effect-grid"
         src="/grid.png"
         alt="grid"
-        style={{ top: `${x}px`, left: `${y}px` }}
+        style={{ top: `${y}px`, left: `${x}px` }}
       />
       <img
         class="background-effect-light"
         src={lightVariants[lightVariant]}
         alt="light"
-        style={{ top: `${x}px`, left: `${y}px` }}
+        style={{ top: `${y}px`, left: `${x}px` }}
       />
     </div>
   );

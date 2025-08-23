@@ -4,7 +4,7 @@ import HeroSection from "../components/HeroSection.tsx";
 import VideoSection from "../components/VideoSection.tsx";
 import OfferSection from "../components/OfferSection.tsx";
 import AboutSection from "../components/AboutSection.tsx";
-import BackgroundEffect from "../components/BackgroundEffect.tsx";
+import Background from "../islands/background.tsx";
 
 export default function Home() {
   const handleCTAClick = () => {
@@ -19,9 +19,7 @@ export default function Home() {
         <link rel="stylesheet" href="/styles.css" />
       </Head>
       <div class="container">
-        <BackgroundEffect lightVariant="secondary" position={[-100, 200]} />
-        <BackgroundEffect position={[600, 1300]} />
-        <BackgroundEffect lightVariant="secondary" position={[1300, 50]} />
+        <Background />
         <main>
           <Header onCTAClick={handleCTAClick} />
           <HeroSection />
